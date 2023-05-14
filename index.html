@@ -7,8 +7,8 @@
     <title>Devops - AR Discovery</title>
 
     <!-- Script files -->
-    <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.6.0/aframe/build/aframe-ar.js"></script>
     <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
+    <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.6.0/aframe/build/aframe-ar.js"></script>
     <script src="https://rawgit.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
 
     <!-- font awesome -->
@@ -21,33 +21,8 @@
     />
 
     <style>
-      * {
-        margin: 0;
-      }
-
-      body {
-        overflow: hidden;
-      }
-
-      #burger {
-        position: fixed;
-        top: 16px;
-        left: 16px;
-
-        padding: 16px;
-        border-radius: 4px;
-        border-width: 0;
-        cursor: pointer;
-
-        filter: drop-shadow(-2px 2px 2px #000);
-
-        font-size: 16px;
-        background-color: white;
-      }
-
-      spline-viewer {
-        width: 100vw;
-        height: 100vh;
+      #menu-btn {
+        z-index: 1000;
       }
     </style>
   </head>
@@ -65,7 +40,7 @@
         <a-assets>
           <a-asset-item
             id="animated-asset"
-            src="./assets/computer/icon.gltf"
+            src="https://raw.githubusercontent.com/nicolocarpignoli/nicolocarpignoli.github.io/master/ar-playground/models/CesiumMan.gltf"
           ></a-asset-item>
 
           <a-asset-item id="computer" src="./computer.glb"></a-asset-item>
