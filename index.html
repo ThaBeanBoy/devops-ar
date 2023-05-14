@@ -11,7 +11,6 @@
     <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
     <script src="https://rawgit.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
 
-    <!-- Font awesome -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -52,7 +51,7 @@
     </style>
   </head>
   <body>
-    <body>
+    <body id="menu-btn" style="margin: 0px; overflow: hidden">
       <button id="burger">
         <i class="fa-solid fa-bars"></i>
       </button>
@@ -67,24 +66,24 @@
             id="animated-asset"
             src="./assets/computer/icon.gltf"
           ></a-asset-item>
+
+          <a-asset-item id="computer" src="./computer.glb"></a-asset-item>
+
+          <a-asset-item id="table" src="./table.gltf"></a-asset-item>
         </a-assets>
 
-        <a-marker preset="hiro">
-          <a-box position="0 0.5 0" color="yellow"></a-box>
-        </a-marker>
-
-        <a-marker type="barcode" value="7">
-          <a-box position="0 0.5 0" color="yellow"></a-box>
-        </a-marker>
-
         <a-marker id="animated-marker" type="barcode" value="6">
-          <a-entity
-            gltf-model="#animated-asset"
-            rotation="90 0 0"
-            scale="0.5"
-            color="blue"
-          >
-          </a-entity>
+          <a-image src="./devops-poster.jpeg"></a-image>
+        </a-marker>
+
+        <!-- DEVOPS PT1 - Planning -->
+        <a-marker id="animated-marker" type="barcode" value="7">
+          <!-- <a-entity gltf-model="#animated-asset" scale="2"> </a-entity> -->
+          <a-entity gltf-model="#computer" scale="0.2 0.2 0.2"> </a-entity>
+        </a-marker>
+
+        <a-marker type="barcode" value="63">
+          <a-box position="0 0.5 0" color="yellow"></a-box>
         </a-marker>
 
         <!-- use this <a-entity camera> to support multiple-markers, otherwise use <a-marker-camera> instead of </a-marker> -->
