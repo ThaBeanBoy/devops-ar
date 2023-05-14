@@ -39,26 +39,33 @@
       >
         <a-assets>
           <a-asset-item
-            id="animated-asset"
-            src="https://raw.githubusercontent.com/nicolocarpignoli/nicolocarpignoli.github.io/master/ar-playground/models/CesiumMan.gltf"
+            id="computer"
+            src="./assets/3d/computer.glb"
           ></a-asset-item>
 
-          <a-asset-item id="computer" src="./computer.glb"></a-asset-item>
-
-          <a-asset-item id="table" src="./table.gltf"></a-asset-item>
+          <a-asset-item id="hammer" src="./assets/3d/hammer.glb"></a-asset-item>
         </a-assets>
 
+        <!-- Summary poster -->
+        <a-marker id="animated-marker" type="barcode" value="5">
+          <a-image src="./assets/images/devops-poster.jpeg"></a-image>
+        </a-marker>
+
+        <!-- Explanation poster -->
         <a-marker id="animated-marker" type="barcode" value="6">
-          <a-image src="./devops-poster.jpeg"></a-image>
+          <a-image src="./assets/images/explanation.jpeg"></a-image>
         </a-marker>
 
-        <!-- DEVOPS PT1 - Planning -->
-        <a-marker id="animated-marker" type="barcode" value="7">
-          <!-- <a-entity gltf-model="#animated-asset" scale="2"> </a-entity> -->
-          <a-entity gltf-model="#computer" scale="0.2 0.2 0.2"> </a-entity>
+        <!-- Experimentation -->
+        <a-marker id="animated-marker" type="barcode" value="61">
+          <a-entity gltf-model="#computer" scale="0.1"> </a-entity>
         </a-marker>
 
-        <a-marker type="barcode" value="63">
+        <a-marker id="animated-marker" type="barcode" value="62">
+          <a-entity gltf-model="#hammer"> </a-entity>
+        </a-marker>
+
+        <a-marker id="animated-marker" type="barcode" value="63">
           <a-box position="0 0.5 0" color="yellow"></a-box>
         </a-marker>
 
